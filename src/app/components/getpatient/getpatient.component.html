@@ -1,0 +1,51 @@
+<br><br><br><br>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body text-center">
+            <label> Get Patient's Info</label><br>
+             <input type="search" placeholder="Enter Patient Id"   name="id"><br><br>
+             <input class="btn btn-primary"   type="submit" (click)="geP()" value="See">
+        </div>
+    </div>
+</div><br>
+<div class="container">
+                                                      
+    <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title m-b-0">Patient's Info</h5>
+            </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                               
+                                <th scope="col">Id</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Prescribtion</th>
+                                <th scope="col">Visited Doctor</th>
+                            </tr>
+                        </thead><br>
+                        <tbody class="customtable">
+                            <tr *ngFor="let patient of patients">
+                                
+                                <td>{{patient.patientId}}</td>
+                                <td>{{patient.patientName}}</td>
+                                <td>{{patient.visitedDoctor}}</td>
+                                <td>{{patient.visitDate}}</td>
+                                <td>{{patient.prescribtion}}</td>
+                                <td>{{patient.patientAge}}</td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+   </div> 
